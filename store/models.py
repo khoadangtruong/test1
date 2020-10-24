@@ -26,9 +26,6 @@ class Product(models.Model):
     digital = models.BooleanField(default=False, null=True, blank=True)
     image = models.ImageField(blank=True)
 
-    def image_tag(self):
-        return mark_safe('<img src="{}" height="50"/>'.format(self.image.url))
-
     def __str__(self):
         return self.name
 
