@@ -5,8 +5,7 @@ class CustomerAdmin(admin.ModelAdmin):
     list_display = ['name', 'email']
 
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ['name', 'price', 'image_tag']
-    readonly_fields = ('image_tag',)
+    list_display = ['name', 'price']
 
 admin.site.register(Customer, CustomerAdmin)
 admin.site.register(Order)
